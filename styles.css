@@ -34,3 +34,21 @@ body{
 #Info p{
   font-size: 18px;
 }
+
+.Form{
+  margin: 20px;
+}
+
+.Form input, select{
+  border-radius: 10px;
+  border: 2px;
+  box-shadow: -2px 2px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 20px;
+  padding: 10px;
+}
+.Form label{
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
