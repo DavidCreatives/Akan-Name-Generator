@@ -3,3 +3,9 @@
   font-size: 30px;
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
+
+body{
+  background-color: orange;
+  border: #9a631c 5px solid;
+  border-radius: 30px;
+}
