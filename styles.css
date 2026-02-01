@@ -8,4 +8,15 @@ body{
   background-color: orange;
   border: #9a631c 5px solid;
   border-radius: 30px;
+
+}
+
+.container_Window{
+  background-color: #9a631c;
+  width: 90%;
+  height: 500px;
+  justify-self: center;
+  margin-bottom: 20px;
+  border-radius: 30px;
+   box-shadow: -5px 5px ;
 }
