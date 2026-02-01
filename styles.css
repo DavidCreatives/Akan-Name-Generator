@@ -13,10 +13,24 @@ body{
 
 .container_Window{
   background-color: #9a631c;
-  width: 90%;
+  width: 80%;
   height: 500px;
   justify-self: center;
   margin-bottom: 20px;
   border-radius: 30px;
    box-shadow: -5px 5px ;
+}
+
+#Info h3{
+  text-align: center;
+  font-size: 25px;
+  text-decoration: underline #5d3b10;
+}
+
+#Info{
+  margin: 20px;
+}
+
+#Info p{
+  font-size: 18px;
 }
