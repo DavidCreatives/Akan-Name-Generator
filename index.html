@@ -19,19 +19,19 @@
       </div>
       <section class="Form">
         <form action="">
-          <label for="DOB">Date of Birth : </label> <br>
-          <p>For example someone born on the 1st of August 1999</p>
+          <label for="DOB" style="text-decoration: underline;">Date of Birth : </label> <br>
+          <p>For example someone born on the <span style="color: blue; font-size: 20px;">1st of August 1999</span> </p>
           <label for="Day">Day : </label>
-          <input type="text" name="Day" id="Day" placeholder="01" maxlength="2"> <br>
+          <input type="text" name="Day" id="Day" placeholder="01" maxlength="2" required> <br>
           <label for="Month">Month : </label>
-          <input type="text" name="Month" id="Month" placeholder="08" maxlength="2"> <br>
+          <input type="text" name="Month" id="Month" placeholder="08" maxlength="2" required> <br>
           <label for="Year1">Fisrt two digits of the year you were born in</label>
-          <input type="text" name="Year1" id="Year1" placeholder="19" maxlength="2"> <br>
+          <input type="text" name="Year1" id="Year1" placeholder="19" maxlength="2" required> <br>
           <label for="Year2">Last two digits of the year you were born in</label>
-          <input type="text" name="Year2" id="Year2" placeholder="99" maxlength="2"> <br>
+          <input type="text" name="Year2" id="Year2" placeholder="99" maxlength="2" required> <br>
 
           <hr>
-          <label for="Gender">Gender</label>
+          <label for="Gender" style="text-decoration: underline;">Gender</label>
           <select name="Gender" id="Gender">
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -43,5 +43,6 @@
         </form>
       </section>
     </section>
+  <script src="./script.js"></script>
   </body>
 </html>
