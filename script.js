@@ -31,4 +31,8 @@ function akanName(){
       Friday : "Kofi",
       Saturday : "Kwame"
     }
+    let d = (((4 * CC - 2) * (CC - 1)) + (45 * YY) + (1026 * (MM + 1)) + DD) % 7
+    
+  } else{
+
   };
