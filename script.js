@@ -15,3 +15,20 @@ const indexAkan = {
   Saturday : 6
 };
 
+function akanName(){
+  const DD = dateInput
+  const MM = monthInput
+  const CC = year1
+  const YY = year2
+  
+  if(gender === "Male") {
+    const maleAkan = {
+      Sunday : "Kwasi",
+      Monday : "Kwadwo",
+      Tuesday : "Kwabena",
+      Wednesday : "Kwaku",
+      Thursday : "Yaw",
+      Friday : "Kofi",
+      Saturday : "Kwame"
+    }
+  };
