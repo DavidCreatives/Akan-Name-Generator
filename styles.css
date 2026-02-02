@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color: orange;
+  background-color: rgb(80, 63, 36);
   border: #9a631c 5px solid;
   border-radius: 30px;
 
@@ -62,3 +62,13 @@ body{
   background-color:bisque;
 }
 
+#SubButton{
+  font-size: 20px;
+  transition: all 0.1s ease-in-out;
+}
+
+#SubButton:hover{
+  background-color: cyan;
+  transform: scale(1.2)
+
+}
