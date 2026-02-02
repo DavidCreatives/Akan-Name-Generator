@@ -18,7 +18,7 @@ body{
   justify-self: center;
   margin-bottom: 20px;
   border-radius: 30px;
-   box-shadow: -5px 5px ;
+  box-shadow: -5px 5px ;
 }
 
 #Info h3{
@@ -44,11 +44,21 @@ body{
   border: 2px;
   box-shadow: -2px 2px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  margin: 20px;
+  margin: 5px;
   padding: 10px;
 }
 .Form label{
   font-size: 20px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.Form{
+  border-radius: 10px;
+  border: 2px;
+  box-shadow: -2px 2px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 15px;
+  padding: 10px;
+  background-color:bisque;
 }
 

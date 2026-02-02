@@ -19,14 +19,27 @@
       </div>
       <section class="Form">
         <form action="">
-          <label for="DOB">Date of Birth : </label>
-          <input type="text" name="DOB" id="DOB">
+          <label for="DOB">Date of Birth : </label> <br>
+          <p>For example someone born on the 1st of August 1999</p>
+          <label for="Day">Day : </label>
+          <input type="text" name="Day" id="Day" placeholder="01" maxlength="2"> <br>
+          <label for="Month">Month : </label>
+          <input type="text" name="Month" id="Month" placeholder="08" maxlength="2"> <br>
+          <label for="Year1">Fisrt two digits of the year you were born in</label>
+          <input type="text" name="Year1" id="Year1" placeholder="19" maxlength="2"> <br>
+          <label for="Year2">Last two digits of the year you were born in</label>
+          <input type="text" name="Year2" id="Year2" placeholder="99" maxlength="2"> <br>
 
+          <hr>
           <label for="Gender">Gender</label>
           <select name="Gender" id="Gender">
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
+
+          <input type="submit" id="SubButton">
+
+          
         </form>
       </section>
     </section>
