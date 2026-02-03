@@ -14,6 +14,8 @@ function akanName(){
   let DD = Number(dateVal)
   let MM = Number(monthVal)
   let calcYear = Number(yearVal)
+  let CC;
+  let YY;
 
   if (MM < 3) {
     MM += 12;
@@ -26,15 +28,10 @@ function akanName(){
     YY = Number(yearVal.substring(2, 4));
   }
 
-  const dayOfWeek = [ "Saturday","Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+  const dayOfWeek = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  const maleAkan = ["Kwame", "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi"];
+  const femaleAkan = ["Ama", "Akosua", "Adwoa", "Abena", "Akua", "Yaa", "Afua"];
 
-  const maleAkan = ["Kwame","Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi"]
-  const femaleAkan = ["Ama","Akosua","Adwoa","Abenaa","Akua","Yaa","Afua"]
-
-  if (MM < 3) {
-    MM += 12;
-    yearVal -= 1;
-  }
 
   let d = Math.floor((((4 * CC - 2) * (CC - 1)) + (45 * YY) + (1026 * (MM + 1)) + DD) % 7)
   if(d < 0){d += 7}
