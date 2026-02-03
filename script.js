@@ -1,16 +1,15 @@
 // DOM elements
 const dateInput = document.getElementById("Date").value;
 const monthInput = document.getElementById("Month").value;
-const year1 = document.getElementById("Year1").value;
-const year2 = document.getElementById("Year2").value;
+const year = document.getElementById("Year").value;
 const gender = document.getElementById("Gender").value;
 const Result = document.getElementById("ResultW");
 
 function akanName(){
   const DD = dateInput
   const MM = monthInput
-  const CC = year1
-  const YY = year2 
+  const CC = Math.floor(year / 100)
+  const YY = (year % 100) 
   
   if(gender === "Male") {
     const maleAkan = {
