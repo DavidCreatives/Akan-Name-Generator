@@ -35,5 +35,5 @@ If you have questions or suggestions, feel free to contact me:
 ### License and Copyright
 Copyright (c) 2024 **[DavidCreatives]**
 
-Licensed under the [MIT License](https://opensource.org).
+Licensed under the [MIT License](https://github.com/DavidCreatives/Akan-Name-Generator/blob/main/LICENSE).
 # Akan-Name-Generator
