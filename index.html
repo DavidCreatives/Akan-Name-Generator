@@ -19,7 +19,7 @@
       </div>
       <section class="FormVresult">
         <section class="Form">
-          <form action="javascript:akanName();">
+          <form onsubmit="akanName(); return false;">
             <label for="DOB" style="text-decoration: underline;">Date of Birth : </label> <br>
             <p>For example someone born on the <span style="color: blue; font-size: 20px;">1st of August 1999</span> </p>
             <label for="Date">Date : </label>
@@ -27,8 +27,8 @@
             <label for="Month">Month : </label>
             <input type="text" name="Month" id="Month" placeholder="08" maxlength="2" required> <br>
             <label for="Year">Year : </label>
-            <input type="text" name="Year" id="Year" placeholder="19" maxlength="2" required> <br>
-            
+            <input type="text" name="Year" id="Year" placeholder="1999" maxlength="4" required> <br>
+
             <hr>
             <label for="Gender" style="text-decoration: underline;">Gender</label>
             <select name="Gender" id="Gender">
