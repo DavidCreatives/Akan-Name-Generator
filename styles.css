@@ -72,3 +72,17 @@ body{
   transform: scale(1.2)
 
 }
+
+.FormVresult{
+  display: flex;
+}
+
+.ResultPanel{
+  border-radius: 10px;
+  border: 2px;
+  box-shadow: -2px 2px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 15px;
+  padding: 10px;
+  background-color:bisque;
+}
