@@ -6,37 +6,24 @@ const gender = document.getElementById("Gender").value;
 const Result = document.getElementById("ResultW");
 
 function akanName(){
-  const DD = dateInput
-  const MM = monthInput
-  const CC = Math.floor(year / 100)
-  const YY = (year % 100) 
-  
+  const DD = Number(dateInput)
+  const MM = Number(monthInput)
+
+  const CC = Number(Math.floor(year / 100))
+  const YY = Number((year % 100))
+
+  const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "THursday", "Friday", "Saturday"]
+
+  const maleAkan = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
+  const femaleAkan = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
+
+  let d = Math.floor((((4 * CC - 2) * (CC - 1)) + (45 * YY) + (1026 * (MM + 1)) + DD) % 7)
+    d = Math.abs(d);
   if(gender === "Male") {
-    const maleAkan = {
-      Sunday : "Kwasi",
-      Monday : "Kwadwo",
-      Tuesday : "Kwabena",
-      Wednesday : "Kwaku",
-      Thursday : "Yaw",
-      Friday : "Kofi",
-      Saturday : "Kwame"
-    }
-    const d = (((4 * CC - 2) * (CC - 1)) + (45 * YY) + (1026 * (MM + 1)) + DD) % 7
-    const Name = Object.values(maleAkan)[d]
+    let Name = maleAkan[d]
     Result.textContent = `Being a ${gender} born on ${DD}/${MM}/${CC}${YY}, your Akan name is ${Name}`
   } else {
-    const femaleAkan = {
-      Sunday : "Akosua",
-      Monday : "Adwoa",
-      Tuesday : "Abenaa",
-      Wednesday : "Akua",
-      Thursday : "Yaa",
-      Friday : "Afua",
-      Saturday : "Ama"
-    }
-
-    const d = (((4 * CC - 2) * (CC - 1)) + (45 * YY) + (1026 * (MM + 1)) + DD) % 7
-    const Name = Object.values(femaleAkan)[d]
+    let Name = femaleAkan[d]
     Result.textContent = `Being a ${gender} born on ${DD}/${MM}/${CC}${YY}, your Akan name is ${Name}`
   };
 }
