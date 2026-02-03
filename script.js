@@ -13,22 +13,56 @@ function akanName(){
 
   let DD = Number(dateVal)
   let MM = Number(monthVal)
-  let CC = Number(yearVal.substring(0, 2))
-  let YY = Number(yearVal.substring(2, 4))
+  let calcYear = Number(yearVal)
 
-  const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-
-  const maleAkan = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
-  const femaleAkan = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
-
-  const d = Math.floor((((4 * CC - 2) * (CC - 1)) + (45 * YY) + (1026 * (MM + 1)) + DD) % 7)
-
-
-  if(gender === "Male") {
-    let Name = maleAkan[d]
-    Result.textContent = `Being a ${genderVal} born on ${day[d]} in the year ${yearVal}, your Akan name is ${Name}`
+  if (MM < 3) {
+    MM += 12;
+    calcYear -= 1;
+    // Re-extract CC and YY based on the adjusted year
+    CC = Number(String(calcYear).substring(0, 2));
+    YY = Number(String(calcYear).substring(2, 4));
   } else {
-    let Name = femaleAkan[d]
-    Result.textContent = `Being a ${genderVal} born on ${day[d]} in the year ${yearVal}, your Akan name is ${Name}`
-  };
+    CC = Number(yearVal.substring(0, 2));
+    YY = Number(yearVal.substring(2, 4));
+  }
+
+  const dayOfWeek = [ "Saturday","Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+  const maleAkan = ["Kwame","Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi"]
+  const femaleAkan = ["Ama","Akosua","Adwoa","Abenaa","Akua","Yaa","Afua"]
+
+  if (MM < 3) {
+    MM += 12;
+    yearVal -= 1;
+  }
+
+  let d = Math.floor((((4 * CC - 2) * (CC - 1)) + (45 * YY) + (1026 * (MM + 1)) + DD) % 7)
+  if(d < 0){d += 7}
+
+  function isValidDate(day, month, year) {
+    // month is 1-indexed (1=Jan, 2=Feb) for this function
+    const date = new Date(year, month - 1, day);
+
+    // Check if components match after JS internal auto-correction
+    return (
+        date.getFullYear() === Number(year) &&
+        date.getMonth() === month - 1 &&
+        date.getDate() === Number(day)
+    );
+  }
+
+  if (isValidDate(dateVal, monthVal, yearVal)) {
+    if(genderVal === "Male") {
+      let Name = maleAkan[d]
+      Result.textContent = `Being a ${genderVal} born on ${dayOfWeek[d]} in the year ${yearVal}, your Akan name is ${Name}`
+    } else {
+      let Name = femaleAkan[d]
+      Result.textContent = `Being a ${genderVal} born on ${dayOfWeek[d]} in the year ${yearVal}, your Akan name is ${Name}`
+    };
+  } else {
+    alert("Invalid date: Please check the number of days for this month/year.");
+  }
+
+
+  
 }
