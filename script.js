@@ -1,32 +1,34 @@
 // DOM elements
-const dateInput = document.getElementById("Date").value;
-const monthInput = document.getElementById("Month").value;
-const year = document.getElementById("Year").value;
-const gender = document.getElementById("Gender").value;
+const dateInput = document.getElementById("Date");
+const monthInput = document.getElementById("Month");
+const year = document.getElementById("Year");
+const gender = document.getElementById("Gender");
 const Result = document.getElementById("ResultW");
 
 function akanName(){
-  let DD = Number(dateInput)
-  let MM = Number(monthInput)
+  const dateVal = dateInput.value;
+  const monthVal = monthInput.value;
+  const yearVal = year.value;
+  const genderVal = gender.value;
 
-  let CC = Number(year.substring(0, 2))
-  let YY = Number(year.substring(2, 4))
+  let DD = Number(dateVal)
+  let MM = Number(monthVal)
+  let CC = Number(yearVal.substring(0, 2))
+  let YY = Number(yearVal.substring(2, 4))
 
   const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "THursday", "Friday", "Saturday"]
 
   const maleAkan = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
   const femaleAkan = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
 
-  let d = Math.floor((((4 * CC - 2) * (CC - 1)) + (45 * YY) + (1026 * (MM + 1)) + DD) % 7)
-  d = Math.abs(d);
+  const d = Math.floor((((4 * CC - 2) * (CC - 1)) + (45 * YY) + (1026 * (MM + 1)) + DD) % 7)
+
 
   if(gender === "Male") {
     let Name = maleAkan[d]
-    Result.textContent = `Being a ${gender} born on ${day[d]} in the year ${year}, your Akan name is ${Name}`
+    Result.textContent = `Being a ${genderVal} born on ${day[d]} in the year ${yearVal}, your Akan name is ${Name}`
   } else {
     let Name = femaleAkan[d]
-    Result.textContent = `Being a ${gender} born on ${day[d]} in the year ${year}, your Akan name is ${Name}`
+    Result.textContent = `Being a ${genderVal} born on ${day[d]} in the year ${yearVal}, your Akan name is ${Name}`
   };
 }
-
-document.getElementById("SubButton").addEventListener('click',akanName)
