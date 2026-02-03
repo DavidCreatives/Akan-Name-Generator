@@ -82,7 +82,14 @@ body{
   border: 2px;
   box-shadow: -2px 2px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  margin: 15px;
+  margin: 15px 15px 15px 0px;
   padding: 10px;
   background-color:bisque;
+  width: 70%;
+}
+
+.ResultPanel h2{
+  text-decoration: underline;
+  text-align: center;
+
 }

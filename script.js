@@ -16,7 +16,7 @@ function akanName(){
   let CC = Number(yearVal.substring(0, 2))
   let YY = Number(yearVal.substring(2, 4))
 
-  const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "THursday", "Friday", "Saturday"]
+  const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
   const maleAkan = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
   const femaleAkan = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
